@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Happy Home</string>
+    <string name="rain">    Rain</string>
+    <string name="val">value</string>
+    <string name="fan">fan</string>
+    <string name="value">30</string>
+    <string name="humi">Humidity</string>
+    <string name="soil">SoilMoist</string>
+    <string name="wlvl">WaterLevel</string>
+    <string name="wtrprrs">WaterPressure</string>
+    <string name="light">Light</string>
+    <string name="check">Check</string>
+    <string name="motion">Motion</string>
+    <string name="vibra">Vibration</string>
+    <string name="windw">Window</string>
+    <string name="segment1">segment1</string>
+    <string name="segment2">segment2</string>
+    <string name="segment3">segment3</string>
+    <string name="segment4">segment4</string>
+    <string name="segment5">segment5</string>
+    <string name="segment6">segment6</string>
+    <string name="segment7">segment7</string>
+    <string name="segment8">segment8</string>
+    <string name="doorlock">DoorLock</string>
+    <string name="door">Door</string>
+    <string name="close">Close</string>
+    <string name="temp">Temperature</string>
+    <string name="smoke">Smoke</string>
+    <string name="statistic">Current Status</string>
+    <string name="burn">Burn</string>
+    <string name="on">ON</string>
+    <string name="off">OFF</string>
+    <string name="nois">Noise Level</string>
+    <string name="home">home</string>
+    <string name="living">Livingroom</string>
+    <string name="garden">Garden</string>
+    <string name="kitchen">Kitchen</string>
+    <string name="imgVw">ImgLock</string>
+    <string name="lock">Lock</string>
+    <string name="unlock">Unlock</string>
+    <string name="open">Open</string>
+    <string name="history">History</string>
+    <string name="active">Active</string>
+    <string name="deactive">Deactive</string>
+
+</resources>

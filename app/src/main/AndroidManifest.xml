@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.naseeha.inter">
+
+    <supports-screens
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".segment_1" />
+        <activity android:name=".segment2" />
+        <activity android:name=".segment3" />
+        <activity android:name=".segment4" />
+        <activity android:name=".segment5" />
+        <activity android:name=".segment6" />
+        <activity android:name=".segment7" />
+        <activity android:name=".segment8" />
+        <activity
+            android:name=".Pop"
+            android:theme="@style/AppTheme.CustomTheme" />
+        <activity android:name=".Contact" />
+        <activity android:name=".home" />
+        <activity android:name=".login" />
+        <activity android:name=".remainder" />
+        <activity android:name=".select_part" />
+        <activity android:name=".SessionManagement" />
+        <activity android:name=".SignUp"></activity>
+    </application>
+
+</manifest>

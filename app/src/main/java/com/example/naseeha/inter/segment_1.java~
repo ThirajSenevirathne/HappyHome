@@ -1,0 +1,237 @@
+package com.example.naseeha.hhv_3;
+
+//import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
+//import android.widget.Toast;
+
+public class segment_1 extends AppCompatActivity {
+    //smoke motion autolight humidity temparature
+
+    Button s1light_on,s1light_off,s1_fan_on,s1_fan_off,s1_smoke_active,s1_smoke_deactive,s1_motion_active,s1_motion_deactive,s1_autolight_active,s1_autolight_deactive;
+    Button s1_humi_active,s1_humi_deactive,s1_humi_check,s1_temp_active,s1_temp_deactive,s1_temp_check;
+    ImageButton s1_Imglight,s1_Imgfan,s1_Imgmotion,s1_Imgautolight,s1_Imghumidity,s1_Imgtemparature,s1_Imgsmoke;
+
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_segment_1);
+
+        fan();
+        light();
+       smoke();
+       motion();
+       autolight();
+       humidity();
+       temparature();
+    }
+
+
+    //for temparature button
+    public void temparature() {
+        s1_temp_active = (Button) findViewById(R.id.s1_temperature_active);
+        s1_temp_deactive = (Button) findViewById(R.id.s1_temparature_deactive);
+        s1_temp_check = (Button) findViewById(R.id.s1_temparature_check);
+        s1_Imgtemparature = (ImageButton) findViewById(R.id.s1_temparature);
+
+
+
+        //setting blue button for active click
+        s1_temp_active.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //   Toast.makeText(getApplicationContext(), "Window Opened", Toast.LENGTH_SHORT).show();
+                s1_Imgtemparature.setImageResource(R.drawable.temp_activate);
+            }
+        });
+
+        //setting  red button for deactive click
+        s1_temp_deactive.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //   Toast.makeText(getApplicationContext(), "Window Opened", Toast.LENGTH_SHORT).show();
+                s1_Imgtemparature.setImageResource(R.drawable.temp_deactivate);
+            }
+        });
+
+        //setting green button for check click
+        s1_temp_check.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //   Toast.makeText(getApplicationContext(), "Window Opened", Toast.LENGTH_SHORT).show();
+                s1_Imgtemparature.setImageResource(R.drawable.temp_check);
+            }
+        });
+    }
+
+
+    public void humidity(){
+
+        s1_humi_active = (Button) findViewById(R.id.s1_humidity_active);
+        s1_humi_deactive = (Button) findViewById(R.id.s1_humidity_deactive);
+        s1_humi_check = (Button) findViewById(R.id.s1_humidity_check);
+        s1_Imghumidity = (ImageButton) findViewById(R.id.s1_humidity);
+
+    //setting blue button for active click
+        s1_humi_active.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //   Toast.makeText(getApplicationContext(), "Window Opened", Toast.LENGTH_SHORT).show();
+                s1_Imghumidity.setImageResource(R.drawable.humi_active);
+            }
+        });
+
+        s1_humi_deactive.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //   Toast.makeText(getApplicationContext(), "Window Opened", Toast.LENGTH_SHORT).show();
+                s1_Imghumidity.setImageResource(R.drawable.humi_deactive);
+            }
+        });
+
+        //setting red button for deactive click
+        s1_humi_check.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //   Toast.makeText(getApplicationContext(), "Window Opened", Toast.LENGTH_SHORT).show();
+                s1_Imghumidity.setImageResource(R.drawable.humid_check);
+            }
+        });
+    }
+
+
+    //for autolight button
+    public void autolight() {
+        s1_autolight_active = (Button) findViewById(R.id.s1_autolight_active);
+        s1_autolight_deactive = (Button) findViewById(R.id.s1_autolight_deactive);
+        s1_Imgautolight = (ImageButton) findViewById(R.id.s1_autolight);
+
+        //setting blue button for active click
+        s1_autolight_active.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //   Toast.makeText(getApplicationContext(), "Window Opened", Toast.LENGTH_SHORT).show();
+                s1_Imgautolight.setImageResource(R.drawable.autolightcntrller_active);
+            }
+        });
+
+        //setting red button for deactive click
+        s1_autolight_deactive.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //   Toast.makeText(getApplicationContext(), "Window Opened", Toast.LENGTH_SHORT).show();
+                s1_Imgautolight.setImageResource(R.drawable.autolightcntrller_deactive);
+            }
+        });
+    }
+
+
+    //for motion button
+    public void motion() {
+        s1_motion_active = (Button) findViewById(R.id.s1_motion_active);
+        s1_motion_deactive = (Button) findViewById(R.id.s1_motion_deactive);
+        s1_Imgmotion = (ImageButton) findViewById(R.id.s1_motion);
+
+        //setting blue button for active click
+        s1_motion_active.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //   Toast.makeText(getApplicationContext(), "Window Opened", Toast.LENGTH_SHORT).show();
+                s1_Imgmotion.setImageResource(R.drawable.motion_actvate);
+            }
+        });
+
+        //setting red button for deactive click
+        s1_motion_deactive.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //   Toast.makeText(getApplicationContext(), "Window Opened", Toast.LENGTH_SHORT).show();
+                s1_Imgmotion.setImageResource(R.drawable.motion_deactvate);
+            }
+        });
+    }
+
+
+    //for smoke button
+    public void smoke() {
+        s1_smoke_active = (Button) findViewById(R.id.s1_smoke_active);
+        s1_smoke_deactive = (Button) findViewById(R.id.s1_smoke_deactive);
+        s1_Imgsmoke = (ImageButton) findViewById(R.id.s1_smoke);
+
+        //setting blue button for active click
+        s1_smoke_active.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //   Toast.makeText(getApplicationContext(), "Window Opened", Toast.LENGTH_SHORT).show();
+                s1_Imgsmoke.setImageResource(R.drawable.smoke_active);
+            }
+        });
+
+        //setting red button for deactive click
+        s1_smoke_deactive.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //   Toast.makeText(getApplicationContext(), "Window Opened", Toast.LENGTH_SHORT).show();
+                s1_Imgsmoke.setImageResource(R.drawable.smoke_deactive);
+            }
+        });
+    }
+
+    //for fan button
+    public void fan() {
+        s1_fan_on = (Button) findViewById(R.id.s1_fan_on);
+        s1_fan_off = (Button) findViewById(R.id.fan_off);
+        s1_Imgfan = (ImageButton) findViewById(R.id.s1_fan);
+
+        //setting blue button for on click
+        s1_fan_on.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //   Toast.makeText(getApplicationContext(), "Window Opened", Toast.LENGTH_SHORT).show();
+                s1_Imgfan.setImageResource(R.drawable.fan_on);
+            }
+        });
+
+        //setting red button for off click
+        s1_fan_off.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //   Toast.makeText(getApplicationContext(), "Window Opened", Toast.LENGTH_SHORT).show();
+                s1_Imgfan.setImageResource(R.drawable.fan_off);
+            }
+        });
+    }
+
+    public void light(){
+        s1light_on =(Button)findViewById(R.id.s1_light_on);
+        s1light_off=(Button)findViewById(R.id.s1_light_off);
+        s1_Imglight=(ImageButton)findViewById(R.id.s1_light);
+
+
+            s1light_on.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //   Toast.makeText(getApplicationContext(), "Window Opened", Toast.LENGTH_SHORT).show();
+                    s1_Imglight.setImageResource(R.drawable.bulb_on);
+                }
+            });
+
+            s1light_off.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //   Toast.makeText(getApplicationContext(), "Window Opened", Toast.LENGTH_SHORT).show();
+                    s1_Imglight.setImageResource(R.drawable.bulb_off);
+                }
+            });
+
+    }
+
+
+
+
+}

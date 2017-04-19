@@ -1,0 +1,32 @@
+package com.example.naseeha.hhv_3;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.util.DisplayMetrics;
+
+/**
+ * Created by thiraj on 1/10/17.
+ */
+
+public class Pop extends Activity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        //set the created layout
+        setContentView(R.layout.popwindow);
+
+        //Create a new matrix object that contain width and height of the screen
+        DisplayMetrics dm=new DisplayMetrics();
+
+        //store the values
+        getWindowManager().getDefaultDisplay().getMetrics(dm);
+
+        //initialize width & height
+        int width=dm.widthPixels;
+        int height=dm.heightPixels;
+
+        //set these values to the new popup window
+        getWindow().setLayout((int)(width*.8), (int)(height*.4));
+    }
+}
